@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Sourabh Bajaj + some brand new features from Mary Feofanova
+% Author : Sourabh Bajaj + some brand new features from Mary Feofanova + /OlympiadAchievement command from Sergei Voloboev
 % Website: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
@@ -90,6 +90,14 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\olympiadAchievement}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textcolor{mygray}{#2}
+    \end{tabular*}
+}
+
+
 \newcommand{\resumeExpSubheading}[5]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -127,8 +135,9 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Mariia (Mary) Feofanova} & Email : \href{mailto:mary.fifa3000@gmail.com}{mary.fifa3000@gmail.com}\\
-  Github: \href{https://github.com/mary3000}{mary3000} & Mobile : +7\hspace{0.5ex}916\hspace{0.5ex}835\hspace{0.5ex}49\hspace{0.5ex}66 \\
+  \textbf{\Large Sergei Voloboev} & Email : \href{mailto:voloboeff201087@gmail.com}{voloboeff201087@gmail.com}\\
+  Github: \href{https://github.com/sergeyerr}{sergeyerr} & Mobile : +7\hspace{0.5ex}919\hspace{0.5ex}460\hspace{0.5ex}02\hspace{0.5ex}92 \\
+  Linkedin: \href{https://www.linkedin.com/in/sergei-voloboev-3138b3196/}{sergei-voloboev-3138b3196} & Spoken Languages: English -- Advanced (IELTS 7.0), Russian -- Native
 \end{tabular*}
 
 
@@ -136,18 +145,16 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-       {Moscow Institute of Physics and Technology}{Moscow, Russia}
-      {Master's degree in Computer Science}{Sept. 2020 - Aug. 2022}
-  \resumeSubheading
-       {The Yandex School of Data Analysis}{Moscow, Russia}{Big Data Infrastructure}{Sept. 2019 - Aug. 2022 (Present)}
+       {Technical University of Munich}{Munich, Germany}
+      {Master of Science in Data Engineering and Analytics}{Oct. 2021 - Sept. 2023 (Present)}
     \resumeSubheading
-      {Moscow Institute of Physics and Technology}{Moscow, Russia}
+      {Perm State University}{Perm, Russia}
       {Bachelor of Applied Mathematics 
-       and Computer Science}{Sept. 2016 - Aug. 2020 (Present)}
+       and Computer Science, GPA 5.0/5.0}{Sept. 2017 - Jul. 2021}
 	 %\begin{comment}
 	 \resumeItemListStart
         \resumeItem{Thesis}
-          {Verification of synchronization primitives and concurrent data structures}
+          {Ontology-driven framework to create intelligent assistants choosing machine learning algorithms}
       \resumeItemListEnd
       %\end{comment}
   \resumeSubHeadingListEnd
@@ -157,87 +164,81 @@
 \section{Experience}
   \resumeSubHeadingListStart
       \resumeExpSubheading
-      {JetBrains}{St. Petersburg, Russia (remote)}
-      {Research Intern, Programming Languages and Tools Lab}{July 2020 - Aug. 2020 (Present)}
-      {\skill{C} \skill{LLVM}}
+      {Laboratory of Code}{Perm, Russia}
+      {Data Engineer}{May 2020 - Jul. 2021}
+      {\skill{Python} \skill{PyTorch} \skill{Apache Airflow} \skill{Docker} \skill{Docker Swarm} \skill{JupyterHub}}
       \resumeDesc{
       \begin{itemize}
-          \item Verifying concurrent C programs under weak memory model with \href{https://plv.mpi-sws.org/genmc/}{GenMC} model checker. 
-          \item Found \href{https://github.com/microsoft/mimalloc/commit/444afa934ff8d53bf8c53602246bfc65828dc1d9}{bug} in mimalloc (Microsoft allocator) using it.
+          \item Led audio denoising project, designed and built Airflow pipelines for distributed data augmentation and training of NNs. 
+          \item Created distributed infrastructure for data science experiments: JupyterHub with dockerized kernels, dockerized Airflow with distributed workers.
       \end{itemize}}
       \resumeExpSubheading
-      {Google}{London, UK}
-      {SWE Intern, Android App Compat team}{July 2019 - Sept. 2019}
-      {\skill{GoLang} \skill{Java} \skill{Android} \skill{C++} \skill{Protobuf} \skill{SQL}}
+      {Perm State University}{Perm, Russia}
+      {Tutor in AI lab}{Sep. 2020 - Jul. 2021}
+      {\skill{Python} \skill{Jupyter notebook} \skill{Numpy} \skill{Pandas} \skill{Matplotlib} \skill{Plotly} \skill{PyTorch}}
       \resumeDesc{
       \begin{itemize}
-          \item Analyzed statistics about Android API usage and wrote design document about its utilization.
-          \item Integrated statistics into Android source code presubmit checker: now it warns if pull-request changes will break popular apps.
-      \end{itemize}}
-      \resumeExpSubheading
-      {Moscow Institute of Physics and Technology}{Moscow, Russia}
-      {Teaching Assistant, "Theory and Practice of Concurrent Computing" course}{Feb. 2019 - Present}
-      {\skill{C++} \skill{x86 Assembly}}
-      \resumeDesc{
-      \begin{itemize}
-          \item Holding seminars, reviewing homework, improving test infrastructure.
+          \item Designed Python and Machine learning crash-courses. Held lectures and seminars for freshmen students.
       \end{itemize}
       }
       \resumeExpSubheading
-      {JetBrains}{Moscow, Russia}
-      {\makecell[l]{SWE, RubyMine team \\ SWE Intern, RubyMine team}}{\makecell[r]{Oct. 2018 - Feb. 2019 \\ Jul. 2018 - Aug. 2018}}
-      {\skill{Java} \skill{Ruby} \skill{Ruby on Rails}}
+      {Simpl}{Perm, Russia}
+      {Junior SWE}{May 2019 - Sep. 2019}
+      {\skill{PySpark} \skill{Python} \skill{Alluxio} \skill{Hadoop} \skill{Docker} \skill{C\#}}
       \resumeDesc{\begin{itemize}
-          \item Developed new intentions, inspections and refactoring options (e.g. \href{https://www.jetbrains.com/help/ruby/introduce-parameter.html}{introduce parameter}) for RubyMine IDE. 
-          \item Improved Rails-specific refactoring system: model fields, associations support.
+          \item Migration from legacy data processing solution(Oracle DB + C\#) to in-memory distributed computing with Spark, Alluxio and Hadoop.
+          \item Setup of Apache Spark cluster on office' computers using Docker and Docker Swarm.
       \end{itemize}}
        
     
   \resumeSubHeadingListEnd
 
-\section{Projects}
+\section{Study Projects}
   \resumeSubHeadingListStart
   
       \resumeProjSubheading
-      {\href{https://gitlab.com/mary3000/twist/-/tree/model-checker-merge/twist/checker}{Model checker for concurrent programs} [Bachelor thesis]}{Moscow, Russia}
-      {\skill{C++}}{Nov. 2019 - May 2020}
-          \resumeDesc{Wrote model checker that tests concurrent C++ programs. Key feature: code doesn't need to be translated to formal language (like TLA+ / +Cal). Verified my work on non-trivial examples: ABA bug inside lock-free cache for Yandex allocator (finds bug 16 times faster than +Cal) and bug inside implementation of Executors framework.}
+      {\href{https://github.com/sergeyerr/DCHelper_1.0}{DCHelper} [Bachelor thesis]}{Perm, Russia}
+      {\skill{Python} \skill{Flask} \skill{FastAPI}  \skill{Docker} \skill{PyTorch} \skill{HuggingFace Transformers} \skill {Ontologies} \skill{PostgreSQL} \skill{JQuery}
+      }{Jan. 2020 - Jul. 2021}
+          \resumeDesc{Demonstration prototype of a microservice platform with a web interface. The platform provides intelligent assistance for choosing ML algorithms from multiple environments (Python, Weka, R), considering user's preferences and the metadata of the processed dataset. The system's smart search bar and chat bot both use ontologies and sentence BERT.}
   
     \resumeProjSubheading
-      {\href{https://github.com/QratorLabs/inclickdb}{InclickDB}}{Moscow, Russia}
-      {\skill{GoLang} \skill{Python} \skill{Grafana} \skill{Graphite} \skill{ClickHouse} \skill{InfluxDB}}{May 2019}
-          \resumeDesc{Investigated possible solutions to a problem of migrating from InclickDB to ClickHouse for a monitoring system with tagged metrics. Created tag support in existing solution by teaching myself Golang and contributed to open-source: \href{https://github.com/lomik/carbon-clickhouse/pull/32}{pull-request}.}
-          
-    \begin{comment}  
-    \resumeProjSubheading
-      {\href{https://github.com/AndroidTopTeam/MyChief}{MyChief}}{Moscow, Russia}
-      {\skill{Java} \skill{Android}}{Nov. 2017}
-      \resumeDesc{Learned Android and implemented all structure and internal code logic (activities, fragments, lru cache) of mobile app that can search for recipes with ingredients entered by user, collaborated with a team of 3 students.}
-    \end{comment}
+      {\href{https://github.com/sergeyerr/Stonxygen-final-lab-distributed_systems-}{Stonxygen}}{Perm, Russia}
+      {\skill{Python} \skill{gRPC} \skill{PostgreSQL} \skill{Redis} \skill{RabbitMQ} \skill{Docker} \skill{Docker swarm} \skill{Nginx} \skill{AWS}}{Dec. 2020}
+          \resumeDesc{A stocks portfolio application which was the final team project of a distributed systems course and required usage of multiple languages and communication technologies, network reliability, and fault tolerance. I designed the system’s scalable architecture, worked on service implementation, and deployed the system on 5 AWS instances.}
+     \resumeProjSubheading
+     {\href{https://github.com/sergeyerr/llvm_pascal_compiler}{Pascal compiler with LLVM Backend}}{Perm, Russia}
+      {\skill{C++} \skill{LLVM}}{Mar. 2021}
+          \resumeDesc{Project for compiler structure course. }
+    
       
   \resumeSubHeadingListEnd
 
 \section{Achievements}
   \resumeSubHeadingListStart
-    \resumeProjSubheading
-      {\href{https://github.com/PhotoLabBestTeam/heroku}{Photo Lab Live Challenge: Go Viral or Go Home} - I place [Hackathon]}{Moscow, Russia}
-      {\skill{Python} \skill{web.py} \skill{Heroku}}
-      {Nov. 2018}
-          \resumeDesc{Developed backend for photo filter that changes clothes style, having only 48 hours was able to quickly learn python framework and to deploy MVP.}
+    \olympiadAchievement
+           {RuCode Festival, AI track 2021 prize-winner (Moscow Institute of Physics and Technology)}{Moscow, Russia}
+    \olympiadAchievement
+           {"I am professional" All-Russian Olympiad, AI track 2020 winner; 2021 prize-winner (Yandex) }{Moscow, Russia}
+    \olympiadAchievement
+           {ICPC Northern Eurasia Finals Honorable Mentions 2018-2019, 2019-2020}{St. Petersburg, Russia}
+    \olympiadAchievement
+           {Xsolla Hackathon 2019 1st place}{Perm, Russia}
+          
   \resumeSubHeadingListEnd
 %
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
  \resumeSubHeadingListStart
    \item{
-     \textbf{Languages}{: C++, GoLang, Java, Python, TLA+, +Cal. }
+     \textbf{Languages}{: Python, GoLang, C, C++, C\#, JavaScript }
    }\vspace{-7pt}
    \item{
-     \textbf{Technologies}{: SQL, Git, \LaTeX, Docker. }
+     \textbf{Technologies}{: Docker, Kubernetes, Git, \LaTeX, AWS, Google Cloud, Heroku, PostgeSQL,  Tableau}
    }
    \vspace{-7pt}
    \item{
-     \textbf{Knowledge}{: Algorithms, Data Structures, Concurrent Computing, Distributed Systems.}
+     \textbf{Knowledge}{: Algorithms, Data Structures, Distributed Systems, Cloud Computing, Machine Learning, NLP, Software Design}
    }
  \resumeSubHeadingListEnd
 
