@@ -93,7 +93,7 @@
 \newcommand{\olympiadAchievement}[2]{
   \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textcolor{mygray}{#2}
+      \text{#1} & \textcolor{mygray}{#2}
     \end{tabular*}
 }
 
@@ -106,6 +106,15 @@
       {\scriptsize#5}
     \end{tabular*}\vspace{4pt}
 }
+
+\newcommand{\resumeTeachingSubheading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \text{#1} & \textcolor{mygray}{\textit{\small #2}}
+    \end{tabular*}
+}
+
+
 
 \newcommand{\resumeProjSubheading}[4]{
   \vspace{-1pt}\item
@@ -150,7 +159,7 @@
     \resumeSubheading
       {Perm State University}{Perm, Russia}
       {Bachelor of Applied Mathematics 
-       and Computer Science, GPA 5.0/5.0}{Sep. 2017 - Jul. 2021}
+       and Computer Science, 5/5}{Sep. 2017 - Jul. 2021}
 	 %\begin{comment}
 	 \resumeItemListStart
         \resumeItem{Thesis}
@@ -173,15 +182,6 @@
           \item Established a distributed secure infrastructure for data science experiments by setting up Kubernetes cluster with distributed Airflow and JupyterHub.
       \end{itemize}}
       \resumeExpSubheading
-      {\href{http://mmft.psu.ru/}{Perm State University}}{Perm, Russia}
-      {Tutor in AI lab}{Sep. 2020 - Jul. 2021}
-      {\skill{Python} \skill{Jupyter Notebook} \skill{Numpy} \skill{Pandas} \skill{Matplotlib} \skill{Plotly} \skill{PyTorch}}
-      \resumeDesc{
-      \begin{itemize}
-          \item Held lectures and seminars on Python and machine learning for freshmen students.
-      \end{itemize}
-      }
-      \resumeExpSubheading
       {\href{https://simpl-group.ru/}{Simpl}}{Perm, Russia}
       {Junior SWE}{May 2019 - Sep. 2019}
       {\skill{PySpark} \skill{Python} \skill{Alluxio} \skill{Hadoop} \skill{Docker} \skill{C\#}}
@@ -192,19 +192,25 @@
        
     
   \resumeSubHeadingListEnd
-
+%-----------TEACHING EXPERIENCE-----------------
+\section{Volunteer Teaching Experience}
+\resumeSubHeadingListStart
+\resumeTeachingSubheading
+{Held lectures and seminars on Python and machine learning for freshmen students of \href{http://mmft.psu.ru/}{PSU}.}{Sep. 2020 - Jul. 2021}
+\resumeSubHeadingListEnd
+%------------PROJECTS-------------------------------
 \section{Projects}
   \resumeSubHeadingListStart
        \resumeProjSubheading
       {\href{https://www.helmholtz-berlin.de/events/summer-school/index_en.html}{HZB ML Hackathon 2021}}{Berlin, Germany}
       {\skill{Python} \skill{Scipy} \skill{Pytorch} \skill{HDBSCAN} \skill{Autoencoders} \skill{Matplotlib} \skill{Pandas}
-      }{Oct. 2021}
+      }{Sep. 2021}
           \resumeDesc{\begin{itemize}
           \item Achieved 0.87 \href{https://scikit-learn.org/stable/modules/generated/sklearn.metrics.v_measure_score.html}{V-measure} on clustering holography images from magnetic domains for labels, produced by group of physicists for 4 years period with usage of HDBSCAN clustering algorithm over VQ-VAE latent space.
            \item Spotted a pattern in magnetic fields via visual analysis of dataset's statistics, the recognition of which improved \href{https://scikit-learn.org/stable/modules/generated/sklearn.metrics.v_measure_score.html}{V-measure} by 0.2.
       \end{itemize}}
       \resumeProjSubheading
-      {\href{https://github.com/sergeyerr/DCHelper_1.0}{DCHelper} [Bachelor thesis]}{Perm, Russia}
+      {\href{https://github.com/sergeyerr/DCHelper_1.0}{Analytical platform with NLP intelligent assistance} [Bachelor thesis]}{Perm, Russia}
       {\skill{Python} \skill{Flask} \skill{FastAPI}  \skill{Docker} \skill{PyTorch} \skill{HuggingFace Transformers} \skill {Ontologies} \skill{PostgreSQL} \skill{JQuery}
       }{Jan. 2020 - Jul. 2021}
           \resumeDesc{
@@ -214,11 +220,11 @@
          \end{itemize}}
   
     \resumeProjSubheading
-      {\href{https://github.com/sergeyerr/Stonxygen-final-lab-distributed_systems-}{Stonxygen}}{Perm, Russia}
+      {\href{https://github.com/sergeyerr/Stonxygen-final-lab-distributed_systems-}{Distributed stocks portfolio application}}{Perm, Russia}
       {\skill{Python} \skill{gRPC} \skill{PostgreSQL} \skill{Redis} \skill{RabbitMQ} \skill{Docker} \skill{Docker swarm} \skill{Nginx} \skill{AWS}}{Dec. 2020}
           \resumeDesc{
           \begin{itemize}
-          \item  Designed the architecture of a stocks portfolio application for the final team project of a distributed systems course, which required usage of multiple languages and communication technologies, network reliability and fault tolerance.  
+          \item  Designed the architecture of the application for the final team project of a distributed systems course, which required usage of multiple languages and communication technologies, network reliability and fault tolerance.  
            \item Deployed the system on 5 AWS instances and tested its overall reliability.
          \end{itemize}}
     
@@ -245,7 +251,7 @@
      \textbf{Languages}{: \textit{(advanced)} Python, C++, C\#; \textit{(basics)} JavaScript, Java, Kotlin, Go }
    }\vspace{-7pt}
    \item{
-     \textbf{Technologies}{: \textit{(advanced)} Docker (Swarm), PostgeSQL; \textit{(basics)} Kubernetes, Git, AWS, Google Cloud, Heroku, Tableau}
+     \textbf{Technologies}{: \textit{(advanced)} Docker (Swarm), PostgeSQL; \textit{(basics)} Kubernetes, Git, AWS, Google Cloud, Linux, Tableau}
    }
    \vspace{-7pt}
    \item{
